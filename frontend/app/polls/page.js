@@ -6,13 +6,13 @@ export default function Polls(){
  const [polls,setPolls] = useState([]);
 
  useEffect(()=>{
-  fetch("http://localhost:5000/api/polls")
+  fetch("https://neoconnect-api-rfzz.onrender.com/api/polls")
    .then(res=>res.json())
    .then(data=>setPolls(data));
  },[]);
 
  const vote = async(id,index)=>{
-  await fetch("http://localhost:5000/api/polls/vote/"+id,{
+  await fetch("https://neoconnect-api-rfzz.onrender.com/api/polls/vote/"+id,{
    method:"POST",
    headers:{
     "Content-Type":"application/json"

@@ -8,7 +8,7 @@ export default function Home() {
   const [success,setSuccess] = useState("");
 
   const submitCase = async () => {
-    const res = await fetch("http://localhost:5000/api/cases",{
+    const res = await fetch("https://neoconnect-api-rfzz.onrender.com/api/cases",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"

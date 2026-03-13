@@ -6,7 +6,7 @@ export default function Analytics(){
  const [data,setData] = useState([]);
 
  useEffect(()=>{
-  fetch("http://localhost:5000/api/analytics/departments")
+  fetch("https://neoconnect-api-rfzz.onrender.com/api/analytics/departments")
    .then(res=>res.json())
    .then(data=>setData(data));
  },[]);

@@ -6,7 +6,7 @@ export default function Dashboard(){
  const [cases,setCases] = useState([]);
 
  useEffect(()=>{
-  fetch("http://localhost:5000/api/cases")
+  fetch("https://neoconnect-api-rfzz.onrender.com/api/cases")
    .then(res=>res.json())
    .then(data=>setCases(data));
  },[]);
